@@ -1,0 +1,22 @@
+# What NOT to upload when deploying with `npx vercel`.
+# When this file exists Vercel uses it INSTEAD of .gitignore, so everything
+# that should stay local has to be listed here.
+
+node_modules
+.next
+out
+.git
+.vercel
+*.tsbuildinfo
+.env*
+.DS_Store
+
+# The price list itself is only needed by `npm run import`, which runs on your
+# computer. The site reads src/data/products.json and public/products instead,
+# so the spreadsheet (and any copy of it) never has to be uploaded.
+data/*.xlsx
+*.xlsx
+data/photos
+
+# Local notes and screenshots
+Claude outputs
